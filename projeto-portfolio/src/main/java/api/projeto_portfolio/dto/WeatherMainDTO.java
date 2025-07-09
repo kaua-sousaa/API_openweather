@@ -16,10 +16,12 @@ import lombok.Setter;
 public class WeatherMainDTO {
     
     private Double temp;
+    private Double temp_max;
+    private Double temp_min;
+
     private int humidity;
 
     @JsonProperty("feels_like")
     private double feelsLike;
-
 
 }

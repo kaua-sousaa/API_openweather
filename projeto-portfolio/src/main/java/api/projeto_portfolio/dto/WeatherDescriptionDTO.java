@@ -16,4 +16,5 @@ public class WeatherDescriptionDTO {
     
     private String main;
     private String description;
+    private String icon;
 }
