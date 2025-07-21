@@ -36,7 +36,7 @@ const HomePage = () => {
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-sky-50 to-slate-200 p-4">
-            <div className="w-1/3 rounded-xl bg-white/70 p-8 shadow-lg backdrop-blur-lg border border-slate-200">
+            <div className="w-full max-w-xl rounded-xl bg-white/70 p-8 shadow-lg backdrop-blur-lg border border-slate-200">
                 <SearchForm onSubmit={handleSearch}/>
                 {loading && <p className="text-sky-600">Buscando...</p>}
                 {error && <p className="text-red-600">{error}</p>}
@@ -52,11 +52,11 @@ const HomePage = () => {
                             <img src={`https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`} alt="" />
                         </div>
                         <div>
-                            <h1 className="text-4xl font-bold text-slate-800">{weatherData.city}</h1>
+                            <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{weatherData.city}</h1>
                             <p className="mt-1 text-lg text-slate-500">{weatherData.description}</p>
                         </div>
                         
-                        <div className='flex items-center space-x-14'>
+                        <div className='flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-around '>
                             <TemperatureDisplay label="Mínima" weatherData={weatherData.temperature_min}/>
                             <TemperatureDisplay label="Atual"weatherData={weatherData.temperature} tempPrincipal={true}/>
                             <TemperatureDisplay label="Máxima" weatherData={weatherData.temperature_max}/>                      

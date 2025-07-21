@@ -6,7 +6,7 @@ const TemperatureDisplay = ({ label, weatherData, tempPrincipal = false }) => {
   return (
     <div className={`${tempPrincipal ? divFontPrincipal : 'text-color-500'}`}>
       <p className={`${tempPrincipal ? pPrincipal : 'text-4xl font-extrabold'}`}>
-        {weatherData}<span className={`"${tempPrincipal ? pSpamPrincipal: "text-sm"} font-normal text-slate-600"`}>°C</span>
+        {weatherData}<span className={`relative align-top top-2 ${tempPrincipal ? pSpamPrincipal: "text-sm"} font-normal text-slate-600`}>°C</span>
       </p>
       <p>{label}</p>
     </div>
